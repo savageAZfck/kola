@@ -1,5 +1,5 @@
 [package]
-name = "kola"
+name = "kola-witness"
 version = "0.1.0"
 edition = "2021"
 rust-version = "1.75"
@@ -11,6 +11,12 @@ description = "Cross-organism witnessing: sovereign agents mutually notarize eac
 keywords = ["audit", "notarization", "witness", "sovereignty", "agents"]
 categories = ["cryptography"]
 readme = "README.md"
+
+[lib]
+# The crates.io package is `kola-witness` (the bare `kola` name
+# is taken); the library keeps the short name so `use kola::…`
+# stays stable.
+name = "kola"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
